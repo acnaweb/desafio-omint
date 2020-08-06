@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.omni</groupId>
+	<artifactId>java-test-antonio-junior</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- SDK -->
+		<java.version>1.8</java.version>
+
+		<!-- MAVEN -->
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+		<maven-shade-plugin.version>2.3</maven-shade-plugin.version>
+
+		<!-- Spring -->
+		<spring-boot.version>2.3.0.RELEASE</spring-boot.version>
+		<spring.version>5.2.6.RELEASE</spring.version>
+
+		<!-- Log4j -->
+		<log4j.version>1.2.17</log4j.version>
+
+		<!-- Swagger -->
+		<swagger.version>2.9.2</swagger.version>
+
+		<!-- Swagger -->
+		<swagger.version>2.9.2</swagger.version>
+
+		<junit-jupiter-engine.version>5.5.2</junit-jupiter-engine.version>
+
+	</properties>
+
+	<dependencies>
+		<!-- [JUnit] -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit-jupiter-engine.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- [/JUnit] -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Java SDK -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Skip Tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+
+		</plugins>
+	</build>
+	<modules>
+		<module>test-model</module>
+		<module>test-persistence</module>
+		<module>test-business</module>
+		<module>test-api</module>
+	</modules>
+</project>
