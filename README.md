@@ -1,20 +1,12 @@
-# Teste Java #
+# Spring Boot API #
 
-
-De acordo com as orientações abaixo, desenvolva um sistema web. 
-
-- Utilize este repositório para armazenar seus códigos-fonte.
-- A aplicação deverá ser funcional.
-- Você deverá apresentar sua solução na entrevista.
-- Contato para dúvidas: eloi.mendes@omni.com.br ou claudio@omni.com.br
 
 ## Tecnologias ##
 
-- **Java**: OPENJDK_11
+- **Java**: Java 1.8
 - **SPRING BOOT**: versão 2.3.1
-- **Banco de dados**: utilize um banco relacional (Oracle, PostgreSQL, MySQL)
-- **Front**: livre escolha
-- **Build tool**: Maven ou Gradle
+- **Banco de dados**: Oracle
+- **Build tool**: Maven
 
 ## Camadas
 
